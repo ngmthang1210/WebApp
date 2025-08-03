@@ -6,9 +6,9 @@ import os
 
 app = Flask(__name__)
 
-#UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = 'uploads'
 RESULT_FOLDER = 'ToPrint'
-#os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(RESULT_FOLDER, exist_ok=True)
 
 HTML_FORM = """
@@ -84,3 +84,4 @@ def process_excel(input_file, output_file):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
